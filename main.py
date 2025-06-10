@@ -8,6 +8,6 @@ game = ZombieShooter(window_width=WINDOW_WIDTH, window_height=WINDOW_HEIGHT,
                      world_height=WORLD_HEIGHT, world_width=WORLD_WIDTH,
                      fps=FPS, sound=True)
 
-# Game loop
+# Game loop 
 while True:
-    game.step()
+    game.step() 

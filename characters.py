@@ -26,7 +26,7 @@ class Player:
         
         self.score = 0
         self.ammo = 10
-        self.health = 0
+        self.health = 10
 
         self.images = {}
 
@@ -65,7 +65,7 @@ class Zombie:
             (random.randint(0, self.world_width - self.size), 0), # Top edge
             (random.randint(0, self.world_width - self.size), self.world_height - self.size), # Bottom edge
             (0, random.randint(0, self.world_height - self.size)), # Left edge
-            (self.world_width - self.size, random.randint(0, self.world_height, self.size)),
+            (self.world_width - self.size, random.randint(0, self.world_height - self.size)),
         ]
 
         return random.choice(spawn_positions)
