@@ -50,13 +50,12 @@ class Agent():
         print(f"Memory size: {asizeof.asizeof(self.memory) / (1024 * 1024 * 1024):2f} Gb")
     
     def train(self, episodes, max_episode_steps, summary_writer_suffix, batch_size, epsilon, epsilon_decay, min_epsilon):
-        os.makedirs("runs", exists_ok=True)
+        os.makedirs("runs", exist_ok=True)
+        os.makedirs("models", exist_ok=True)
         summary_writer_name = os.path.join('runs', f'{datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}_{summary_writer_suffix}')
 
         writer = SummaryWriter(summary_writer_name)
 
-        if not os.path.exists('models'):
-            os.makedirs('models')
 
         total_steps = 0
 
