@@ -26,7 +26,7 @@ class Player:
         
         self.score = 0
         self.ammo = 10
-        self.health = 10
+        self.health = 5
 
         self.images = {}
 

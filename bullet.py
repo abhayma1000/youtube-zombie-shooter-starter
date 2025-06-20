@@ -7,8 +7,6 @@ class SingleBullet:
 		self.y = y
 		self.direction = direction
 
-		print(f"Bullet launched in direction {direction}")
-
 		self.rect = pygame.Rect(x, y, 10, 10)
 
 		self.bullet_speed = 10
@@ -36,8 +34,6 @@ class ShotgunBullet:
 		self.y = y
 		self.direction = direction
 		self.angle_offset = math.radians(angle_offset)
-
-		print(f"Bullet launched in direction {direction} with angle offset {angle_offset}")
 
 		self.rect = pygame.Rect(x, y, 10, 10)
 		self.bullet_speed = 10
